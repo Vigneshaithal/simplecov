@@ -4,7 +4,7 @@ require "benchmark/ips"
 require "coverage"
 
 Coverage.start
-# such meta, many wow
+# such meta
 require_relative "../lib/simplecov"
 require_relative "../spec/faked_project/lib/faked_project"
 result = Coverage.result
@@ -14,7 +14,7 @@ class MyFormatter
     result.files.map do |file|
       "#{file.filename}: #{file.covered_percent} #{file.lines_of_code}"
     end
-    result.covered_percent.to_s
+     result.covered_percent.to_s
   end
 end
 
